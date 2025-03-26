@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0d1117;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 900px;
+            background: #161b22;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .login-box, .info-box {
+            padding: 40px;
+            color: white;
+            flex: 1;
+        }
+
+        .login-box {
+            background: #161b22;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .highlight {
+            color: #2ea44f;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            transition: 0.3s;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        input:focus {
+            box-shadow: 0 0 10px #2ea44f;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #2ea44f;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background: #238636;
+            transform: scale(1.05);
+        }
+
+        .social-icons a img {
+            width: 40px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            animation: bounceIn 1.2s ease-in-out;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .social-icons a img:hover {
+            transform: scale(1.2);
+        }
+
+        .info-box {
+            background: #2ea44f;
+            color: #0d1117;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .info-box img {
+            width: 300px;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .signup {
+            color: #2ea44f;
+            text-decoration: none;
+        }
+
+        .signup:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Welcome Back to <span class="highlight">SkillSWAP</span></h2>
+            <p>Enter your credentials to log in</p>
+            <p>Don't have an account? <a href="signup.html" class="signup">Sign up</a></p>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div class="social-icons">
+                <a href="https://accounts.google.com" target="_blank"><img src="google.webp" alt="Google"></a>
+                <a href="https://github.com/login" target="_blank"><img src="github.webp" alt="GitHub"></a>
+                <a href="https://www.facebook.com/login" target="_blank"><img src="facebook.webp" alt="Facebook"></a>
+            </div>
+            <p>Don't have an account? <a href="#" class="signup">Sign up</a></p>
+        </div>
+        <div class="info-box">
+            <img src="logoskill.webp" alt="SkillSwap Logo">
+            <h2>Why Join SkillSwap?</h2>
+            <p>“Join SkillSwap to connect with professionals, exchange skills, and boost your career. Learn from experts and grow in a thriving community!”</p>
+        </div>
+    </div>
+</body>
+</html>
