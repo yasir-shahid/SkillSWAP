@@ -17,3 +17,5 @@ Database: MongoDB
 Authentication: JWT-based authentication
 Real-Time Communication: Socket.io
 
+LIVE LINK: https://skill-swap-new.netlify.app/
+
